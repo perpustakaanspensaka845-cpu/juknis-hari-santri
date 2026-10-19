@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juknis Lomba Hari Santri Nasional - SMPN 1 Kandat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    @media print {
+      .no-print { display: none !important; }
+      .print-show { display: block !important; }
+      .tab-content { display: block !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased min-h-screen flex flex-col">
+
+  <!-- Header / Kop Surat -->
+  <header class="bg-white border-b-4 border-emerald-700 shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-center md:text-left">
+        <p class="text-[11px] font-bold tracking-widest uppercase text-slate-500">PEMERINTAH KABUPATEN KEDIRI • DINAS PENDIDIKAN</p>
+        <h1 class="text-xl md:text-2xl font-extrabold text-slate-900 leading-tight">SMP NEGERI 1 KANDAT</h1>
+        <p class="text-xs text-slate-600">Jl. Raya Kandat Kediri, Kecamatan Kandat, Kabupaten Kediri 64173</p>
+        <p class="text-[11px] text-slate-500">Telepon (0354) 411440 | Pos-el: smpn1kandat@yahoo.co.id | Laman: http://smpn1kandat.sch.id</p>
+      </div>
+
+      <!-- Tombol Unduh / Cetak PDF -->
+      <div class="no-print flex gap-2">
+        <button onclick="window.print()" class="bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow transition flex items-center gap-2">
+          <i class="fa-solid fa-file-pdf text-sm"></i> Unduh / Cetak PDF
+        </button>
+      </div>
+    </div>
+
+    <!-- Judul Dokumen -->
+    <div class="bg-emerald-800 text-white text-center py-2.5 px-4">
+      <h2 class="text-sm md:text-base font-extrabold tracking-wide">PETUNJUK TEKNIS PELAKSANAAN LOMBA</h2>
+      <p class="text-[11px] text-emerald-200 uppercase tracking-wider">DALAM RANGKA MEMPERINGATI HARI SANTRI NASIONAL</p>
+    </div>
+
+    <!-- MENU UTAMA BERDASARKAN LOMBA -->
+    <nav class="no-print bg-slate-900 text-white">
+      <div class="max-w-6xl mx-auto px-4 flex overflow-x-auto space-x-1">
+        <button onclick="openMainTab('qasidah')" id="btn-main-qasidah" class="main-tab-btn py-3 px-5 text-xs font-bold flex items-center gap-2 border-b-2 border-emerald-400 text-emerald-400 bg-slate-800 transition whitespace-nowrap">
+          <i class="fa-solid fa-music"></i> 1. LOMBA KARAOKE QASIDAH MODERN
+        </button>
+        <button onclick="openMainTab('cakap')" id="btn-main-cakap" class="main-tab-btn py-3 px-5 text-xs font-bold flex items-center gap-2 border-b-2 border-transparent text-slate-400 hover:text-white transition whitespace-nowrap">
+          <i class="fa-solid fa-brain"></i> 2. LOMBA CAKAP SPENSAKA
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- KONTEN UTAMA -->
+  <main class="max-w-6xl mx-auto px-4 py-6 flex-grow w-full">
+
+    <!-- ================================================================= -->
+    <!-- MENU 1: LOMBA KARAOKE QASIDAH MODERN -->
+    <!-- ================================================================= -->
+    <div id="main-qasidah" class="main-tab-content space-y-4">
+      
+      <!-- SUB MENU LOMBA 1 -->
+      <div class="no-print bg-white p-2 rounded-xl border border-slate-200 shadow-sm flex overflow-x-auto gap-2">
+        <button onclick="openSubTab('qasidah', 'sub-q-1')" id="btn-sub-q-1" class="sub-tab-qasidah px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-100 text-emerald-800 transition whitespace-nowrap">
+          Pelaksanaan & Peserta
+        </button>
+        <button onclick="openSubTab('qasidah', 'sub-q-2')" id="btn-sub-q-2" class="sub-tab-qasidah px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">
+          Peraturan & Ketentuan Lomba
+        </button>
+        <button onclick="openSubTab('qasidah', 'sub-q-3')" id="btn-sub-q-3" class="sub-tab-qasidah px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">
+          Penilaian, Juri & Pemenang
+        </button>
+      </div>
+
+      <!-- SUB KONTEN QASIDAH 1: PELAKSANAAN & PESERTA -->
+      <div id="sub-q-1" class="content-qasidah bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+        <div>
+          <h3 class="text-base font-bold text-emerald-900 border-b pb-2 mb-3">Pelaksanaan</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200"><strong>a. Hari/Tanggal:</strong> Kamis, 22 Oktober 2026</div>
+            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200"><strong>b. Tempat:</strong> Lapangan Basket</div>
+            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200"><strong>c. Waktu:</strong> 07.30- selesai</div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-base font-bold text-emerald-900 border-b pb-2 mb-3">Ketentuan Peserta</h3>
+          <ol class="list-none space-y-2 text-xs text-slate-700">
+            <li>1) Setiap kelas mengirimkan perwakilan:
+              <ul class="list-disc list-inside pl-4 mt-1 space-y-1 text-slate-700">
+                <li><strong>Penyanyi:</strong> Maksimal 3 orang per kelas.</li>
+                <li><strong>Penari latar yang mengiringi penyanyi:</strong> Minimal 8 orang per kelas.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- SUB KONTEN QASIDAH 2: PERATURAN & KETENTUAN LOMBA -->
+      <div id="sub-q-2" class="content-qasidah hidden bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+        <div>
+          <h3 class="text-base font-bold text-emerald-900 border-b pb-2 mb-3">Peraturan Umum</h3>
+          <ol class="list-decimal list-inside text-xs text-slate-700 space-y-2 leading-relaxed">
+            <li>Setiap peserta menyanyikan lagu Islami (Religi), genre bebas, kecuali hadrah</li>
+            <li>Lagu yang dinyanyikan harus mengandung pesan positif, seperti dakwah, akhlak, persaudaraan, kecintaan kepada Allah SWT. dan Rasulullah SAW., atau nasihat kebaikan.</li>
+            <li>Seluruh peserta dan penari latar wajib menjaga ketertiban, kesopanan, dan sportivitas selama kegiatan berlangsung. Gerakan yang ditampilkan tidak bertentangan dengan norma kesopanan dan nilai-nilai keislaman.</li>
+            <li>Peserta wajib hadir di lokasi perlombaan menit sebelum acara dimulai.</li>
+          </ol>
+        </div>
+
+        <div>
+          <h3 class="text-base font-bold text-emerald-900 border-b pb-2 mb-3">Ketentuan Lomba</h3>
+          <ol class="list-decimal list-inside text-xs text-slate-700 space-y-2 leading-relaxed">
+            <li>Pengiriman instrumen lagu dilakukan paling lambat H-1 melalui tautan yang telah disediakan. Panitia akan memeriksa setiap lagu yang masuk untuk memastikan kesesuaian dengan ketentuan jenis lagu.</li>
+            <li>Pengirimaan instrumen lagu menggunakan format MP3.</li>
+            <li>Durasi penampilan maksimal 10 menit.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- SUB KONTEN QASIDAH 3: PENILAIAN, JURI & PEMENANG -->
+      <div id="sub-q-3" class="content-qasidah hidden bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+        <div>
+          <h3 class="text-base font-bold text-emerald-900 border-b pb-2 mb-3">Kategori Penilaian</h3>
+          <ol class="list-decimal list-inside text-xs text-slate-700 space-y-1 mb-2">
+            <li>Teknik Vocal</li>
+            <li>Penampilan/ Aksi Panggung</li>
+            <li>Penghayatan dana ekspresi</li>
+          </ol>
+          <div class="p-2.5 bg-amber-50 border border-amber-200 rounded-lg text-xs font-medium text-amber-900">
+            Catatan: Kostum tidak menjadi Penilaian
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="text-base font-bold text-emerald-900 border-b pb-2 mb-3">Juri Lomba</h3>
+            <ol class="list-decimal list-inside text-xs text-slate-700 space-y-1">
+              <li>Rudi Setyo Adi Nugroho, S.Pd.</li>
+              <li>Frely Maysinta Safrina, S.Pd.</li>
+              <li>Ulul Azmiyah, S.Pd.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h3 class="text-base font-bold text-emerald-900 border-b pb-2 mb-3">Ketentuan Pemenang</h3>
+            <ol class="list-decimal list-inside text-xs text-slate-700 space-y-1 mb-2">
+              <li>Keputusan pemenang lomba dilihat berdasarkan hasil akhir perlombaan</li>
+              <li>Hadiah yang disediakan adalah Juara 1, 2 dan 3</li>
+            </ol>
+            <div class="text-xs text-slate-700 space-y-0.5 bg-slate-50 p-3 rounded-lg border border-slate-200">
+              <p><strong>Juara 1:</strong> Sertifikat juara dan Voucher</p>
+              <p><strong>Juara 2:</strong> Sertifikat juara dan Voucher</p>
+              <p><strong>Juara 3:</strong> Sertifikat juara dan Voucher</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- MENU 2: LOMBA CAKAP SPENSAKA -->
+    <!-- ================================================================= -->
+    <div id="main-cakap" class="main-tab-content hidden space-y-4">
+      
+      <!-- SUB MENU LOMBA 2 -->
+      <div class="no-print bg-white p-2 rounded-xl border border-slate-200 shadow-sm flex overflow-x-auto gap-2">
+        <button onclick="openSubTab('cakap', 'sub-c-1')" id="btn-sub-c-1" class="sub-tab-cakap px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-100 text-teal-800 transition whitespace-nowrap">
+          Pelaksanaan, Peserta & Materi
+        </button>
+        <button onclick="openSubTab('cakap', 'sub-c-2')" id="btn-sub-c-2" class="sub-tab-cakap px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">
+          1) Babak Penyisihan
+        </button>
+        <button onclick="openSubTab('cakap', 'sub-c-3')" id="btn-sub-c-3" class="sub-tab-cakap px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">
+          2) Babak Semi Final
+        </button>
+        <button onclick="openSubTab('cakap', 'sub-c-4')" id="btn-sub-c-4" class="sub-tab-cakap px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">
+          3) Babak Final
+        </button>
+        <button onclick="openSubTab('cakap', 'sub-c-5')" id="btn-sub-c-5" class="sub-tab-cakap px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-100 transition whitespace-nowrap">
+          Juri & Pemenang
+        </button>
+      </div>
+
+      <!-- SUB KONTEN CAKAP 1: PELAKSANAAN, PESERTA & MATERI -->
+      <div id="sub-c-1" class="content-cakap bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+        <div>
+          <h3 class="text-base font-bold text-teal-900 border-b pb-2 mb-3">Pelaksanaan</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200"><strong>Hari/Tanggal:</strong> Kamis, 22 Oktober 2026</div>
+            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200"><strong>b. Tempat:</strong> Lapangan Basket</div>
+            <div class="p-3 bg-slate-50 rounded-xl border border-slate-200"><strong>c. Waktu:</strong> 07.30- selesai</div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-base font-bold text-teal-900 border-b pb-2 mb-3">Ketentuan Peserta</h3>
+          <ol class="list-decimal list-inside text-xs text-slate-700 space-y-1.5">
+            <li>Peserta merupakan siswa aktif SMP Negeri 1 Kandat.</li>
+            <li>Lomba dilaksanakan secara beregu.</li>
+            <li>Setiap regu terdiri atas 3 orang peserta.</li>
+            <li>Setiap kelas mengirimkan minimal 1 regu</li>
+            <li>Peserta wajib hadir 15 menit sebelum perlombaan dimulai.</li>
+            <li>Setiap peserta wajib membawa perlengkapan sendiri berupa spidol, penghapus, serta pilihan media tulis berupa papan tulis mini yang dapat dihapus atau kertas F4 minimal 20 lembar</li>
+          </ol>
+        </div>
+
+        <div>
+          <h3 class="text-base font-bold text-teal-900 border-b pb-2 mb-3">Materi Lomba</h3>
+          <ol class="list-decimal list-inside text-xs text-slate-700 space-y-1.5 leading-relaxed">
+            <li><strong>Al-Qur'an dan Hadis:</strong> Tajwid dasar dan surat pilihan</li>
+            <li><strong>Akidah:</strong> rukun iman, rukun islam, iman kepada rasul, iman kepada malaikat dan asmaul husna</li>
+            <li><strong>Akhlak:</strong> jujur, amanah, tawaduk, toleransi, tabayun, adab pergaulan, dan etika bermedia sosial.</li>
+            <li><strong>Fikih:</strong> thaharah (bersuci), salat, puasa, zakat, serta ibadah sehari-hari.</li>
+            <li><strong>Sejarah Kebudayaan Islam:</strong> sejarah Nabi Muhammad saw., para rasul, dan Khulafaur Rasyidin</li>
+            <li><strong>Pengetahuan Islam lainnya:</strong> doa harian, hari besar Islam, serta penerapan nilai-nilai Islam dalam kehidupan di sekolah, keluarga, dan Masyarakat</li>
+            <li>Hal-hal yang berkaitan dengan hari Santri Nasional</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- SUB KONTEN CAKAP 2: BABAK PENYISIHAN -->
+      <div id="sub-c-2" class="content-cakap hidden bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <h3 class="text-base font-bold text-teal-900 border-b pb-2">1) Babak Penyisihan</h3>
+        <ol class="list-none space-y-2 text-xs text-slate-700 leading-relaxed">
+          <li>a) Pada babak penyisihan, semua regu mengikuti permainan secara bersama-sama.</li>
+          <li>b) Babak penyisihan menggunakan sistem Ranking 1, yaitu peserta menjawab pertanyaan secara serentak, peserta yang menjawab benar bisa maju satu langkah, sedangkan yang menjawab salah mundur satu langkah</li>
+          <li>c) Sebanyak 9 regu yang berhasil menempati area atau barisan paling depan pada akhir sesi berhak lolos ke babak berikutnya.</li>
+        </ol>
+      </div>
+
+      <!-- SUB KONTEN CAKAP 3: BABAK SEMI FINAL -->
+      <div id="sub-c-3" class="content-cakap hidden bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+        <div>
+          <h3 class="text-base font-bold text-teal-900 border-b pb-2 mb-3">2) Babak Semi Final - Ketentuan Peserta</h3>
+          <ol class="list-decimal list-inside text-xs text-slate-700 space-y-1.5">
+            <li>Babak semifinal diikuti oleh regu yang dinyatakan lolos dari babak penyisihan.</li>
+            <li>Setiap regu terdiri atas 3 orang peserta.</li>
+            <li>Seluruh regu memulai babak semifinal dengan nilai 0 (nol).</li>
+            <li>Setiap regu wajib menunjuk satu ketua regu sebagai juru bicara untuk menyampaikan jawaban.</li>
+            <li>Perlombaan dipandu oleh moderator dan dinilai oleh dewan juri.</li>
+          </ol>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Sesi 1 -->
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+            <h4 class="font-bold text-xs text-teal-900 uppercase">SESI 1 - SOAL WAJIB SERENTAK</h4>
+            <ol class="list-decimal list-inside text-xs text-slate-700 space-y-1">
+              <li>Pada sesi ini, seluruh regu mendapatkan pertanyaan yang sama dan menjawab secara bersamaan.</li>
+              <li>Moderator membacakan 10 soal yang sama untuk seluruh regu.</li>
+              <li>Setiap soal dibacakan satu kali dan dapat diulang jika diperlukan untuk memperjelas pertanyaan.</li>
+              <li>Setiap regu diberi waktu maksimal 10 detik untuk mendiskusikan dan menuliskan jawaban.</li>
+              <li>Setelah moderator memberikan aba-aba "Angkat Jawaban!", seluruh regu menunjukkan jawaban secara bersamaan.</li>
+              <li>Jawaban yang telah ditunjukkan tidak boleh diganti.</li>
+              <li>Jawaban benar mendapat nilai +10.</li>
+              <li>Jawaban salah -10 jika tidak menjawab mendapat nilai 0.</li>
+              <li>Nilai setiap regu dicatat oleh tim pencatat nilai.</li>
+            </ol>
+          </div>
+
+          <!-- Sesi 2 -->
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+            <h4 class="font-bold text-xs text-teal-900 uppercase">SESI 2 - SOAL KHUSUS DAN LEMPARAN</h4>
+            <ol class="list-decimal list-inside text-xs text-slate-700 space-y-1">
+              <li>Pada sesi ini, setiap regu memperoleh pertanyaan khusus sesuai urutan yang ditentukan. Apabila regu yang mendapat pertanyaan pertama tidak dapat menjawab dengan benar, pertanyaan dapat dilempar kepada regu sebelahnya.</li>
+              <li>Setiap regu memperoleh soal khusus secara bergiliran.</li>
+              <li>Moderator membacakan soal kepada regu yang mendapat giliran.</li>
+              <li>Regu yang mendapat soal diberi waktu maksimal 10 detik untuk menjawab.</li>
+              <li>Jika jawaban benar, regu mendapat nilai +10.</li>
+              <li>Jika jawaban salah mendapat nilai -10 jika tidak menjawab, regu mendapat nilai 0</li>
+              <li>Apabila jawaban salah atau regu tidak menjawab, moderator menawarkan soal tersebut untuk dilempar kepada regu lain.</li>
+              <li>Regu lain yang bersedia menjawab harus menyatakan kesediaannya setelah moderator memberikan aba-aba.</li>
+              <li>Regu yang mendapat kesempatan menjawab melalui lemparan diberi waktu maksimal 10 detik untuk menjawab.</li>
+              <li>Jawaban lemparan yang benar mendapat nilai +10.</li>
+              <li>Jawaban lemparan yang salah mendapat nilai -10.</li>
+              <li>Jika tidak ada regu yang bersedia menjawab, soal dinyatakan hangus dan tidak ada penambahan atau pengurangan nilai.</li>
+              <li>Regu yang melempar soal tidak boleh menjawab kembali soal yang sama.</li>
+            </ol>
+          </div>
+
+          <!-- Sesi 3 -->
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+            <h4 class="font-bold text-xs text-teal-900 uppercase">SESI 3 - REBUTAN KILAT</h4>
+            <ol class="list-decimal list-inside text-xs text-slate-700 space-y-1">
+              <li>Pada sesi ini, seluruh regu berkesempatan menjawab pertanyaan dengan sistem tercepat dengan menekan bel</li>
+              <li>Moderator membacakan 10 soal rebutan.</li>
+              <li>Jika regu menekan bel sebelum pembacaan soal selesai. Moderator akan langsung menghentikan pembacaan soal dan regu tersebut wajib segera memberikan jawaban.</li>
+              <li>Regu yang pertama menekan bel secara sah memperoleh kesempatan menjawab.</li>
+              <li>Regu harus menjawab dalam waktu maksimal 5 detik setelah dipersilakan moderator.</li>
+              <li>Jawaban benar mendapat nilai +10.</li>
+              <li>Jawaban salah mendapat nilai -10.</li>
+              <li>Jika regu yang pertama menjawab salah, soal dapat dilempar kepada regu lain sesuai keputusan dan aturan yang diumumkan sebelum lomba.</li>
+              <li>Regu yang memperoleh kesempatan kedua diberi waktu maksimal 5 detik untuk menjawab.</li>
+              <li>Jawaban kedua yang benar mendapat nilai +10, sedangkan jawaban salah mendapat nilai -10.</li>
+              <li>Jika tidak ada regu yang menekan bel, soal dinyatakan hangus.</li>
+              <li>Regu dilarang menekan bel sebelum waktu yang diperbolehkan atau mengganggu konsentrasi regu lain.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUB KONTEN CAKAP 4: BABAK FINAL -->
+      <div id="sub-c-4" class="content-cakap hidden bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+        <div>
+          <h3 class="text-base font-bold text-teal-900 border-b pb-2 mb-3">3) Babak Final - Ketentuan Peserta</h3>
+          <ol class="list-decimal list-inside text-xs text-slate-700 space-y-1.5">
+            <li>Babak final diikuti oleh 3 regu terbaik yang lolos dari babak semifinal.</li>
+            <li>Setiap regu terdiri atas 3 orang peserta.</li>
+            <li>Seluruh regu memulai babak final dengan nilai awal 0 (nol).</li>
+            <li>Setiap regu wajib menjaga ketertiban, sportivitas, dan kejujuran selama perlombaan.</li>
+            <li>Babak final dipandu oleh moderator dan dinilai oleh dewan juri.</li>
+          </ol>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Sesi I Final -->
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+            <h4 class="font-bold text-xs text-teal-900 uppercase">SESI I - SOAL KHUSUS DAN LEMPARAN</h4>
+            <ol class="list-decimal list-inside text-xs text-slate-700 space-y-1">
+              <li>Pada sesi ini, setiap regu memperoleh 9 amplop yang masing-masing berisi 1 pertanyaan. Apabila regu yang mendapat pertanyaan pertama tidak dapat menjawab dengan benar, pertanyaan dapat dilempar kepada regu lain.</li>
+              <li>Setiap regu memperoleh soal khusus secara bergiliran.</li>
+              <li>Moderator membacakan soal kepada regu yang mendapat giliran.</li>
+              <li>Regu yang mendapat soal diberi waktu maksimal 10 detik untuk menjawab.</li>
+              <li>Jika jawaban benar, regu mendapat nilai +10.</li>
+              <li>Jika jawaban salah mendapat nilai -10 jika tidak menjawab, regu mendapat nilai 0</li>
+              <li>Apabila jawaban salah atau regu tidak menjawab, moderator menawarkan soal tersebut untuk dilempar kepada regu lain.</li>
+              <li>Regu lain yang bersedia menjawab harus menyatakan kesediaannya setelah moderator memberikan aba-aba.</li>
+              <li>Regu yang mendapat kesempatan menjawab melalui lemparan diberi waktu maksimal 10 detik untuk menjawab.</li>
+              <li>Jawaban lemparan yang benar mendapat nilai +10.</li>
+              <li>Jawaban lemparan yang salah mendapat nilai -10.</li>
+              <li>Jika tidak ada regu yang bersedia menjawab, soal dinyatakan hangus dan tidak ada penambahan atau pengurangan nilai.</li>
+              <li>Regu yang melempar soal tidak boleh menjawab kembali soal yang sama.</li>
+            </ol>
+          </div>
+
+          <!-- Sesi II Final -->
+          <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+            <h4 class="font-bold text-xs text-teal-900 uppercase">SESI II - REBUTAN KILAT</h4>
+            <p class="text-xs text-slate-700 mb-1">Pada sesi ini, seluruh regu memiliki kesempatan yang sama untuk menjawab pertanyaan dengan sistem rebutan dengan menekan bel</p>
+            <p class="font-semibold text-xs text-slate-800">Ketentuan pelaksanaan:</p>
+            <ol class="list-decimal list-inside text-xs text-slate-700 space-y-1">
+              <li>Moderator menyiapkan 10 soal rebutan.</li>
+              <li>Moderator membacakan soal sampai selesai sebelum regu diperbolehkan untuk menekan bel</li>
+              <li>Regu yang pertama menekan bel secara sah memperoleh kesempatan menjawab.</li>
+              <li>Regu yang memperoleh kesempatan menjawab harus memberikan jawaban dalam waktu maksimal 5 detik setelah dipersilakan moderator.</li>
+              <li>Jawaban benar mendapat nilai +10.</li>
+              <li>Jawaban salah mendapat pengurangan nilai -10</li>
+              <li>Jika regu yang pertama menjawab salah, soal dinyatakan selesai dan tidak dilempar kepada regu lain.</li>
+              <li>Jika tidak ada regu yang menekan bel, soal dinyatakan hangus dan tidak ada penambahan atau pengurangan nilai.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUB KONTEN CAKAP 5: JURI & PEMENANG -->
+      <div id="sub-c-5" class="content-cakap hidden bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="text-base font-bold text-teal-900 border-b pb-2 mb-3">Juri Lomba</h3>
+            <ol class="list-decimal list-inside text-xs text-slate-700 space-y-1">
+              <li>Moh. Ilham Al Farisky, S.Pd.</li>
+              <li>Arina Mailana Robiatus Subhah, S.Pd.</li>
+              <li>Luk Luk Atul Khamidatin, S.Pd.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h3 class="text-base font-bold text-teal-900 border-b pb-2 mb-3">Ketentuan Pemenang</h3>
+            <ol class="list-decimal list-inside text-xs text-slate-700 space-y-1 mb-2">
+              <li>Keputusan pemenang lomba dilihat berdasarkan hasil akhir perlombaan</li>
+              <li>Hadiah yang disediakan adalah Juara 1, 2 dan 3</li>
+            </ol>
+            <div class="text-xs text-slate-700 space-y-0.5 bg-slate-50 p-3 rounded-lg border border-slate-200">
+              <p><strong>Juara 1:</strong> Sertifikat juara dan Voucher</p>
+              <p><strong>Juara 2:</strong> Sertifikat juara dan Voucher</p>
+              <p><strong>Juara 3:</strong> Sertifikat juara dan Voucher</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 text-center text-xs py-4 border-t border-slate-800">
+    SMP NEGERI 1 KANDAT • Hari Santri Nasional 2026
+  </footer>
+
+  <!-- JAVASCRIPT NAVIGASI TAB & SUB-TAB -->
+  <script>
+    function openMainTab(tabName) {
+      // Hide all main contents
+      document.querySelectorAll('.main-tab-content').forEach(el => el.classList.add('hidden'));
+      // Reset main button styles
+      document.querySelectorAll('.main-tab-btn').forEach(btn => {
+        btn.classList.remove('border-emerald-400', 'text-emerald-400', 'bg-slate-800');
+        btn.classList.add('border-transparent', 'text-slate-400');
+      });
+
+      // Show selected main content
+      document.getElementById('main-' + tabName).classList.remove('hidden');
+      
+      // Highlight active main button
+      const activeBtn = document.getElementById('btn-main-' + tabName);
+      activeBtn.classList.remove('border-transparent', 'text-slate-400');
+      activeBtn.classList.add('border-emerald-400', 'text-emerald-400', 'bg-slate-800');
+    }
+
+    function openSubTab(lomba, subId) {
+      if (lomba === 'qasidah') {
+        document.querySelectorAll('.content-qasidah').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('.sub-tab-qasidah').forEach(btn => {
+          btn.classList.remove('bg-emerald-100', 'text-emerald-800');
+          btn.classList.add('text-slate-600');
+        });
+
+        document.getElementById(subId).classList.remove('hidden');
+        const activeSubBtn = document.getElementById('btn-' + subId);
+        activeSubBtn.classList.remove('text-slate-600');
+        activeSubBtn.classList.add('bg-emerald-100', 'text-emerald-800');
+      } else if (lomba === 'cakap') {
+        document.querySelectorAll('.content-cakap').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('.sub-tab-cakap').forEach(btn => {
+          btn.classList.remove('bg-teal-100', 'text-teal-800');
+          btn.classList.add('text-slate-600');
+        });
+
+        document.getElementById(subId).classList.remove('hidden');
+        const activeSubBtn = document.getElementById('btn-' + subId);
+        activeSubBtn.classList.remove('text-slate-600');
+        activeSubBtn.classList.add('bg-teal-100', 'text-teal-800');
+      }
+    }
+  </script>
+</body>
+</html>
